@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Post | Instagram Clone</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-auth-required>
+  <header class="topbar">
+    <a class="brand" href="index.html">Instagram Clone</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Feed</a>
+      <a href="upload.html" aria-current="page">Upload</a>
+      <a href="search.html">Search</a>
+      <a class="profile-link" href="profile.html">Profile</a>
+      <button class="text-button logout-button" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-shell narrow-shell">
+    <section class="panel">
+      <h1>Create Post</h1>
+      <p class="muted">Choose an image and write a caption.</p>
+
+      <form id="uploadForm" class="stacked-form">
+        <label for="image">Image</label>
+        <input id="image" name="image" type="file" accept="image/*" required>
+
+        <div id="imagePreview" class="image-preview" aria-live="polite"></div>
+
+        <label for="caption">Caption</label>
+        <textarea id="caption" name="caption" rows="4" placeholder="Write a caption..."></textarea>
+
+        <button class="primary-button" type="submit">Upload Post</button>
+        <p id="uploadMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>

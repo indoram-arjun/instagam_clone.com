@@ -1,0 +1,28 @@
+{
+  "name": "instagram-clone",
+  "version": "1.0.0",
+  "description": "A full-stack Instagram clone built with HTML, CSS, JavaScript, Node.js, Express, and MySQL.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "check": "node --check backend/server.js && node --check backend/db.js && node --check backend/routes/auth.js && node --check backend/routes/posts.js && node --check backend/routes/users.js && node --check backend/routes/interactions.js && node --check backend/controllers/authController.js && node --check backend/controllers/postController.js && node --check backend/controllers/userController.js && node --check backend/controllers/interactionController.js && node --check backend/middleware/authMiddleware.js"
+  },
+  "keywords": [
+    "instagram",
+    "clone",
+    "express",
+    "mysql",
+    "jwt"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.12.0"
+  }
+}

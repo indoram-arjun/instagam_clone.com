@@ -1,0 +1,533 @@
+:root {
+  --bg: #f7f7f8;
+  --surface: #ffffff;
+  --text: #141417;
+  --muted: #72727d;
+  --line: #dfdfe5;
+  --soft-line: #eeeef2;
+  --accent: #e23d68;
+  --accent-dark: #bd244d;
+  --accent-warm: #f59f37;
+  --success: #147a42;
+  --danger: #b42318;
+  --shadow: 0 12px 30px rgba(20, 20, 23, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(226, 61, 104, 0.14), transparent 34%),
+    linear-gradient(315deg, rgba(245, 159, 55, 0.16), transparent 38%),
+    var(--bg);
+}
+
+.auth-shell {
+  width: min(100%, 420px);
+}
+
+.auth-card,
+.panel,
+.post-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.auth-card {
+  padding: 34px;
+}
+
+.auth-card h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.stacked-form {
+  display: grid;
+  gap: 10px;
+}
+
+.stacked-form label {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--text);
+  padding: 12px 14px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(226, 61, 104, 0.14);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.primary-button,
+.text-button,
+.secondary-button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+}
+
+.primary-button:hover {
+  filter: brightness(0.96);
+}
+
+.primary-button.compact {
+  min-height: 38px;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.secondary-button {
+  padding: 0 16px;
+  color: var(--text);
+  background: #f1f1f4;
+}
+
+.text-button {
+  padding: 0;
+  color: var(--accent-dark);
+  background: transparent;
+}
+
+.switch-link {
+  margin: 22px 0 0;
+  text-align: center;
+}
+
+.switch-link a,
+.caption a,
+.user-card a {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.form-message,
+.page-message {
+  min-height: 24px;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.form-message.error,
+.page-message.error {
+  color: var(--danger);
+}
+
+.form-message.success,
+.page-message.success {
+  color: var(--success);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 66px;
+  padding: 0 clamp(16px, 4vw, 42px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+}
+
+.page-shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 30px 18px 60px;
+}
+
+.narrow-shell {
+  width: min(100%, 680px);
+}
+
+.feed-shell {
+  width: min(100%, 720px);
+}
+
+.action-strip,
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.action-strip h1,
+.section-heading h2 {
+  margin-bottom: 4px;
+}
+
+.posts-list {
+  display: grid;
+  gap: 22px;
+}
+
+.post-card {
+  overflow: hidden;
+}
+
+.post-header,
+.post-actions,
+.comment-row,
+.user-card,
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-header {
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--soft-line);
+}
+
+.avatar {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-warm));
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.avatar.large {
+  width: 92px;
+  height: 92px;
+  font-size: 34px;
+}
+
+.post-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #ececf0;
+}
+
+.post-body {
+  padding: 14px 16px 16px;
+}
+
+.post-actions {
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-button {
+  min-width: 46px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.icon-button.is-liked {
+  border-color: rgba(226, 61, 104, 0.25);
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.caption {
+  margin-bottom: 12px;
+}
+
+.comments-toggle {
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.comments-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--soft-line);
+}
+
+.comment-row {
+  align-items: baseline;
+  gap: 8px;
+}
+
+.comment-row strong {
+  font-size: 14px;
+}
+
+.comment-row p {
+  margin: 0;
+}
+
+.comment-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.comment-form input {
+  min-width: 0;
+}
+
+.profile-header {
+  align-items: flex-start;
+  gap: 26px;
+  padding: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-header h1 {
+  margin-bottom: 8px;
+}
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 12px 0;
+}
+
+.profile-meta strong {
+  display: block;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.profile-post {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #ececf0;
+}
+
+.profile-post img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.profile-post span {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(20, 20, 23, 0.72);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.panel {
+  padding: 28px;
+}
+
+.image-preview {
+  display: none;
+  overflow: hidden;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.image-preview.has-image {
+  display: block;
+}
+
+.image-preview img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+}
+
+.search-input {
+  margin-top: 10px;
+}
+
+.user-results {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.user-card {
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.user-card p {
+  margin-bottom: 0;
+}
+
+.empty-state {
+  padding: 28px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .topbar,
+  .action-strip,
+  .profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbar {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .auth-card,
+  .panel {
+    padding: 24px;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comment-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .auth-card {
+    padding: 22px 18px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    padding: 22px 0;
+  }
+}

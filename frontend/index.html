@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Feed | Instagram Clone</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-auth-required>
+  <header class="topbar">
+    <a class="brand" href="index.html">Instagram Clone</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Feed</a>
+      <a href="upload.html">Upload</a>
+      <a href="search.html">Search</a>
+      <a class="profile-link" href="profile.html">Profile</a>
+      <button class="text-button logout-button" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-shell feed-shell">
+    <section class="action-strip">
+      <div>
+        <h1>Home Feed</h1>
+        <p class="muted">Posts from you and the people you follow.</p>
+      </div>
+      <a class="primary-button compact" href="upload.html">New Post</a>
+    </section>
+
+    <p id="feedStatus" class="page-message" role="status">Loading posts...</p>
+    <section id="postsContainer" class="posts-list" aria-live="polite"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+</html>

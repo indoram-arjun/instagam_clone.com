@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Users | Instagram Clone</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-auth-required>
+  <header class="topbar">
+    <a class="brand" href="index.html">Instagram Clone</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Feed</a>
+      <a href="upload.html">Upload</a>
+      <a href="search.html" aria-current="page">Search</a>
+      <a class="profile-link" href="profile.html">Profile</a>
+      <button class="text-button logout-button" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-shell narrow-shell">
+    <section class="panel">
+      <h1>Search Users</h1>
+      <label class="visually-hidden" for="searchInput">Search by username</label>
+      <input id="searchInput" class="search-input" type="search" placeholder="Search by username" autocomplete="off">
+      <p id="searchStatus" class="form-message" role="status"></p>
+    </section>
+
+    <section id="searchResults" class="user-results" aria-live="polite"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

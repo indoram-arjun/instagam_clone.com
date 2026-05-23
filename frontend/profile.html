@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Instagram Clone</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-auth-required>
+  <header class="topbar">
+    <a class="brand" href="index.html">Instagram Clone</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Feed</a>
+      <a href="upload.html">Upload</a>
+      <a href="search.html">Search</a>
+      <a class="profile-link" href="profile.html" aria-current="page">Profile</a>
+      <button class="text-button logout-button" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section id="profileHeader" class="profile-header">
+      <p class="page-message">Loading profile...</p>
+    </section>
+
+    <section class="section-heading">
+      <h2>Posts</h2>
+      <p id="profileStatus" class="muted" role="status"></p>
+    </section>
+    <section id="profilePosts" class="profile-grid" aria-live="polite"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
